@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Consulta Clara Canarias</title>
+  <link rel="stylesheet" href="./styles.css" />
+  
+</head>
+<body>
+  <div id="app">
+    <header class="mobile-header">
+      <div class="mh-title">Consulta Clara <span>Canarias</span></div>
+      <button class="hamburger" aria-label="Menú"><i></i><i></i><i></i></button>
+    </header>
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">CC</div>
+        <div>
+          <h1>Consulta Clara</h1>
+          <p>Canarias</p>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Navegación principal">
+        <button data-view="dashboard" class="active">Inicio</button>
+        <button data-view="clients">Clientes</button>
+        <button data-view="sessions">Sesiones</button>
+        <button data-view="invoices">Facturas</button>
+        <button data-view="payments">Cobros</button>
+        <button data-view="expenses">Gastos</button>
+        <button data-view="quarters">Trimestres</button>
+        <button data-view="advisor">Gestoría</button>
+        <button data-view="settings">Ajustes</button>
+      </nav>
+      <div class="sidebar-note">
+        <strong>Uso administrativo.</strong>
+        <span>No introducir notas clínicas sensibles.</span>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Resumen del mes en curso</p>
+          <h2 id="pageTitle">Inicio</h2>
+        </div>
+        <div class="topbar-actions">
+          <button id="seedDemoBtn" class="btn secondary">Datos demo</button>
+          <button id="exportBtn" class="btn secondary">Exportar</button>
+          <button id="quickAddBtn" class="btn primary">+ Nuevo</button>
+        </div>
+      </header>
+
+      <section id="content" class="content"></section>
+    </main>
+
+    <nav class="mobile-nav" aria-label="Navegación móvil">
+      <button data-view="dashboard" class="active">Inicio</button>
+      <button data-view="clients">Clientes</button>
+      <button data-view="sessions">Agenda</button>
+      <button data-view="invoices">Facturas</button>
+      <button data-view="payments">Cobros</button>
+    </nav>
+
+    <button id="fabBtn" class="fab" aria-label="Crear nuevo">+</button>
+  </div>
+
+  <dialog id="modal" class="modal">
+    <form method="dialog" class="modal-card">
+      <div class="modal-head">
+        <h3 id="modalTitle">Nuevo</h3>
+        <button id="modalClose" class="icon-btn" value="cancel" type="button">×</button>
+      </div>
+      <div id="modalBody" class="modal-body"></div>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="./app.js"></script>
+</body>
+</html>
